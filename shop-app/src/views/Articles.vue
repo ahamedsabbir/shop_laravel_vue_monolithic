@@ -8,15 +8,15 @@ export default {
     data() {
         return {
             loading: true,
-            products: [],
+            articles: [],
         };
     },
     methods: {
         async handleSubmit() {
             try {
-                const response = await axios.get("http://localhost/shop_laravel_vue_monolithic/laravel-app/public/api/products");
+                const response = await axios.get("http://localhost/shop_laravel_vue_monolithic/laravel-app/public/api/articles");
                 setTimeout(() => {
-                    this.products = response.data.products;
+                    this.articles = response.data.articles;
                     this.loading = false
                 }, 1000)
             } catch (error) {
@@ -32,14 +32,14 @@ export default {
 <template>
     <div class="container mt-4 mb-4">
         <div class="row">
-            <div class="col-md-4 mb-4" v-for="product in products" :key="product.id">
+            <div class="col-md-4 mb-4" v-for="article in articles" :key="article.id">
                 <div class="card">
                     <img src="/public/assets/img/p(2).jpg" class="card-img-top" alt="..." />
                     <div class="card-body" style="min-height: 200px;">
-                        <h5 class="card-title">{{ product.name }}</h5>
-                        <p class="card-text">{{ product.description }}</p>
-                        <p class="card-text">Price: {{ product.price }}</p>
-                        <router-link class="btn btn-primary" aria-current="page" :to="`/post/${product.id}`">View</router-link>
+                        <h5 class="card-title">{{ article.title }}</h5>
+                        <p class="card-text">{{ article.body }}</p>
+                        <p class="card-text">Slug: {{ article.slug }}</p>
+                        <router-link class="btn btn-primary" aria-current="page" :to="`/article/${article.id}`">View</router-link>
                         &nbsp;
                         <button class="btn btn-primary">Add</button>
                     </div>

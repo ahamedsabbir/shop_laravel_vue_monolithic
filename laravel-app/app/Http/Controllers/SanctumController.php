@@ -24,7 +24,8 @@ class SanctumController extends Controller
         return response()->json([
             'user' => $user,
             'token' => $token,
-			'msg' => "data save."
+			'msg' => "data save.",
+            'status' => 200
         ]);
     }
 

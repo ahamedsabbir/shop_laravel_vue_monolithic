@@ -11,5 +11,5 @@ import config from './config.js';
 
 const app = createApp(App);
 app.config.globalProperties.$config = config;
-app.use(ToastPlugin).use(router).mount('#app');
+app.use(ToastPlugin).use(router).use(store).mount('#app');
 

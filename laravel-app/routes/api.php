@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SanctumController;
@@ -15,3 +17,11 @@ Route::post("/logout", [SanctumController::class, 'logout'])->middleware('auth:s
 
 //profile
 Route::post("/profile/image/{id}", [SanctumController::class, 'profilePhoto'])->middleware('auth:sanctum');
+
+//products
+Route::get("/products", [ProductController::class, 'index']);
+Route::get("/product/{id}", [ProductController::class, 'show']);
+
+//articles
+Route::get("/articles", [ArticleController::class, 'index']);
+Route::get("/article/{id}", [ArticleController::class, 'show']);

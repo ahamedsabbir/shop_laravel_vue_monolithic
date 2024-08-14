@@ -38,6 +38,7 @@ export default {
                     <div class="card-body" style="min-height: 200px;">
                         <h5 class="card-title">{{ article.title }}</h5>
                         <p class="card-text">{{ article.body }}</p>
+                        <p class="card-text">{{ article.cover_image }}</p>
                         <p class="card-text">Slug: {{ article.slug }}</p>
                         <router-link class="btn btn-primary" aria-current="page" :to="`/article/${article.id}`">View</router-link>
                         &nbsp;

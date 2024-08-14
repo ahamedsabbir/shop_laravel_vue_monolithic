@@ -31,6 +31,7 @@ export default {
 };
 </script>
 <template>
+    <Loading v-if="loading"></Loading>
     <div class="container mt-4 mb-4">
         <div class="row">
             <div class="col-md-12 mb-4">
@@ -46,6 +47,6 @@ export default {
             </div>
         </div>
     </div>
-    <Loading v-if="loading"></Loading>
+    
 </template>
 <style scoped></style>

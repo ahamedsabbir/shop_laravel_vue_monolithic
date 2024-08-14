@@ -38,11 +38,11 @@ export default {
                 Dropdown
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Log-in</a></li>
+                <li><router-link class="dropdown-item" :to="{name: 'login'}">Login</router-link></li>
                 <li><button class="dropdown-item">Log-out</button></li>
                 <li><router-link class="dropdown-item" :to="{name: 'register'}">Register</router-link></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><router-link class="dropdown-item" :to="{name: 'profile'}">Profile</router-link></li>
+                <li><router-link class="dropdown-item" :to="{name: 'dashboard'}">Dashboard</router-link></li>
               </ul>
             </li>
           </ul>

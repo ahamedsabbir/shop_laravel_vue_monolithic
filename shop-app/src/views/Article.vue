@@ -32,6 +32,7 @@ export default {
 };
 </script>
 <template>
+    <Loading v-if="loading"></Loading>
     <div class="container mt-4 mb-4">
         <div class="row">
             <div class="col-md-12 mb-4">
@@ -40,13 +41,13 @@ export default {
                     <div class="card-body" style="min-height: 200px">
                         <h5 class="card-title">{{ article.title }}</h5>
                         <p class="card-text">{{ article.body }}</p>
+                        <p class="card-text">{{ article.cover_image }}</p>
                         <p class="card-text">Slug: {{ article.slug }}</p>
                         <button class="btn btn-primary">Add</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <Loading v-if="loading"></Loading>
+    </div>   
 </template>
 <style scoped></style>

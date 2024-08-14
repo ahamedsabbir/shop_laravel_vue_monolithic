@@ -8,6 +8,9 @@ import Article from '@/views/Article.vue'
 import Articles from '@/views/Articles.vue'
 import Register from '@/views/Register.vue'
 import Dashboard from '@/views/Dashboard.vue'
+import Login from '@/views/Login.vue'
+import Profile from '@/views/Profile.vue'
+
 
 const routes = [
   {
@@ -54,6 +57,16 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: Dashboard
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: Profile
   }
 ]
 

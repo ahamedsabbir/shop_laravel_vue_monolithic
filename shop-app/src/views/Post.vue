@@ -36,7 +36,7 @@ export default {
         <div class="row">
             <div class="col-md-12 mb-4">
                 <div class="card">
-                    <img src="/public/assets/img/p(2).jpg" class="card-img-top" alt="..." />
+                    <img src="https://picsum.photos/200/100" class="card-img-top" alt="..." />
                     <div class="card-body" style="min-height: 200px;">
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description }}</p>

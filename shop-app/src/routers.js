@@ -10,6 +10,7 @@ import Register from '@/views/Register.vue'
 import Dashboard from '@/views/Dashboard.vue'
 import Login from '@/views/Login.vue'
 import Profile from '@/views/Profile.vue'
+import PostInsert from '@/views/PostInsert.vue'
 
 
 const routes = [
@@ -62,6 +63,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
+  },
+  {
+    path: '/postinsert',
+    name: 'postinsert',
+    component: PostInsert
   },
   {
     path: '/profile',

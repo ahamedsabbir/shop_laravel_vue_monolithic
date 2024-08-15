@@ -34,7 +34,7 @@ export default {
         <div class="row">
             <div class="col-md-4 mb-4" v-for="product in products" :key="product.id">
                 <div class="card">
-                    <img src="/public/assets/img/p(2).jpg" class="card-img-top" alt="..." />
+                    <img :src="`https://picsum.photos/id/${product.id}/200/100`" class="card-img-top" alt="..." />
                     <div class="card-body" style="min-height: 200px;">
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description }}</p>

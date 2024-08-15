@@ -1,8 +1,10 @@
 <template>
-    <h1>Profile</h1>
-	<img :src="image" style="width:200px; height:200px;"/>
-    <p>url:- {{ $store.state.auth.image }}</p>
-	<input type="file" @change="handleFileUpload"/>
+    <div class="container mt-4">
+        <label for="file">
+            <img :src="image" style="width:200px; height:200px;"/>
+        </label>
+        <input id="file" type="file" @change="handleFileUpload" class="d-none"/>
+    </div>
 </template>
 
 <script>

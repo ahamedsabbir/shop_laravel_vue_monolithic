@@ -26,6 +26,8 @@
 
 <script>
 import axios from 'axios'
+import {useToast} from 'vue-toast-notification';
+const $toast = useToast();
 
 export default {
     data() {
@@ -41,8 +43,9 @@ export default {
                 const response = await axios.post('/login', this.form)
                 this.auth = response.data.user;
                 this.auth.token = response.data.token;
+                this.auth.type = response.data.type;
                 this.$store.dispatch('callAuth', this.auth);
-                alert(response.data.msg || 'Student added successfully');
+                $toast.success(response.data.msg || 'Login successfully');
                 this.$router.push('/dashboard');
             } catch (error) {
                 alert(error.response.data.msg || 'Error adding student')

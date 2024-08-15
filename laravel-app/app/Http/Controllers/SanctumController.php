@@ -24,7 +24,8 @@ class SanctumController extends Controller
         return response()->json([
             'user' => $user,
             'token' => $token,
-			'msg' => "data save.",
+			'msg' => "you are register.",
+            'type' => true,
             'status' => 200
         ]);
     }
@@ -45,7 +46,9 @@ class SanctumController extends Controller
         return response()->json([
             'user' => $user,
             'token' => $token,
-			'msg' => "data save."
+            'type' => true,
+			'msg' => "you are login.",
+            'status' => 200
         ]);
     }
 
@@ -53,7 +56,9 @@ class SanctumController extends Controller
     {
         $request->user()->currentAccessToken()->delete();
         return response()->json([
-            'msg' => "logout"
+            'msg' => "logout",
+            'type' => false,
+            'status' => 200
         ]);
     }
 	public function profilePhoto(Request $request, $id)
@@ -68,7 +73,8 @@ class SanctumController extends Controller
 		$user->save();
 		return response()->json([
             'image' => $imageUrl,
-            'msg' => "image upload"
+            'msg' => "image upload",
+            'status' => 200
         ]);
 	}
 }

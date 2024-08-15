@@ -44,6 +44,7 @@ export default createStore({
   },
   getters: {
     allAuth: state => state.auth,
+    getImage: state => "http://localhost/shop_laravel_vue_monolithic/laravel-app/public/storage/" + state.auth.image,
   },
   plugins: [localStoragePlugin]
 })

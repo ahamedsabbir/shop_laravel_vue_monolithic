@@ -20,8 +20,9 @@ Route::post("/profile/image/{id}", [SanctumController::class, 'profilePhoto'])->
 
 //products
 Route::get("/products", [ProductController::class, 'index']);
+Route::post("/product/insert", [ProductController::class, 'store']);
 Route::get("/product/{id}", [ProductController::class, 'show']);
 
 //articles
-Route::get("/articles", [ArticleController::class, 'index']);
-Route::get("/article/{id}", [ArticleController::class, 'show']);
+Route::get("/articles", [ArticleController::class, 'index'])->middleware('auth:sanctum');
+Route::get("/article/{id}", [ArticleController::class, 'show'])->middleware('auth:sanctum');

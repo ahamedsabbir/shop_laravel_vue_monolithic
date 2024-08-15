@@ -5,12 +5,11 @@ import BsFooter from './components/BsFooter.vue'
 </script>
 
 <template>
-  <BsNav></BsNav>
-  
   <main>
+    <BsNav></BsNav>
     <router-view />
+    <BsFooter></BsFooter>
   </main>
-  <BsFooter></BsFooter>
 </template>
 
 <style scoped></style>

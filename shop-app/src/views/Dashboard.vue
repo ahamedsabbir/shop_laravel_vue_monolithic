@@ -4,7 +4,9 @@
     <p>Role:- {{ auth.role }}</p>
     <p>Token:- {{ $store.state.auth.token }}</p>
     <p>Email:- {{ $store.getters.allAuth.email }}</p>
+    <p>type:- {{ $store.state.auth.type }}</p>
     <button @click="clickHandel">Change Name</button>
+    
     <button @click="clickLogout">logout</button>
 </template>
 
@@ -35,7 +37,7 @@ export default {
     },
     computed: {
         ...mapState(['auth'])
-    }
+    },
 }
 </script>
 

@@ -6,7 +6,7 @@ export default {
 </script>
 <template>
     <BsCarousel></BsCarousel>
-    <h1>Home</h1>
+    <h1>Sabbir Home</h1>
 </template>
 <style scoped>
 </style>
